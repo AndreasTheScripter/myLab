@@ -1,26 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>myLab (Asphira)</title>
+	<title>myLab (+Responsive)</title>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="./assets/images/favicon.png" type="image/png">
 	<link rel="stylesheet" href="./assets/css/index.css">
 	<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-	<link rel="icon" type="image/png" href="./assets/images/favicon.png">
-
+	<link rel="stylesheet" href="./assets/css/jquery.bxslider.min.css">
+	
 	<script src="./assets/scripts/jquery-3.1.1.min.js"></script>
-	<script src="./assets/scripts/expandSearchbar.js"></script>
 	<script src="./assets/scripts/shrinkNavbar.js"></script>
+	<script src="./assets/scripts/parallaxBlur.js"></script>
 	<script src="./assets/scripts/parallaxScroll.js"></script>
 	<script src="./assets/scripts/rippleEffect.js"></script>
+	<script src="./assets/scripts/jquery.bxslider.min.js"></script>
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF7iOum84fIhwdcHEJlccC6qPnaVkMrk8&callback=initMap" async defer></script>
 </head>
 <body>
 	<header>
 		<div id="header-slideshow">
-			<img src="./assets/images/header (width-1366px).jpg" alt="" style="width: 100%; height: 100vh; display: block;" />
+			<img src="./assets/images/header (width-1366px).png" alt=""/>
 			<section class="header-desc">
-				<h2>WELCOME TO <span class="font-semibold">MYLAB</span></h2>
-				<h1 class="font-semibold">GROW YOUR BUSINESS WITH US!</h1>
+				<h2>WELCOME TO <span>MYLAB</span></h2>
+				<h1>GROW YOUR BUSINESS WITH US!</h1>
 				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
 				<section class="container-button"><a class="ripple-effect" href="#!">GET STARTED</a></section>
 			</section>
@@ -28,76 +32,106 @@
 		<nav>
 			<div class="wrapper col-11">
 				<a href="index.html"><img src="./assets/images/nav-logo.png" alt="" style="display: block;"/></a>
-				<section class="menu ">
-					<ul>
+				<section class="menu">
+					<section id="menu-button"></section>
+					<ul id="link-menu">
 						<li>
-						<a class="font-semibold active" href="#!">HOME</a></li><li>
-						<a class="font-semibold" href="#!">PORTFOLIO</a></li><li>
-						<a class="font-semibold" href="#!">BLOG</a></li><li>
-						<a class="font-semibold" href="#!">SHOP</a></li><li>
-						<a class="font-semibold" href="#!">PAGES</a></li><li>
-						<a class="font-semibold" href="#!">FEATURES</a></li><li>
-						<a class="font-semibold" href="#!">SHORTCODES</a></li><li>
-						<a class="font-semibold" href="#!">CONTACT</a></li>
+						<a class="active" href="#!">HOME</a></li><li>
+						<a href="#!">PORTFOLIO</a></li><li>
+						<a href="#!">BLOG</a></li><li>
+						<a href="#!">SHOP</a></li><li>
+						<a href="#!">PAGES</a></li><li>
+						<a href="#!">FEATURES</a></li><li>
+						<a href="#!">CONTACT</a></li><li class="button-dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle">DROPDOWN TEST</a>
+							<ul class="dropdown-menu">
+								<li>
+								<a href="#!">SUB MENU 1</a></li><li>
+								<a href="#!">SUB MENU 2</a></li><li>
+								<a href="#!">SUB MENU 3</a></li><li>
+								<a href="#!">SUB MENU 4</a></li><li class="button-dropdown">
+								<a href="javascript:void(0)" class="dropdown-toggle">SUB MENU 5</a>
+									<ul class="dropdown-menu">
+										<li>
+										<a href="#!">PARENT MENU 1</a></li><li>
+										<a href="#!">PARENT MENU 2</a></li><li>
+										<a href="#!">PARENT MENU 3</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<form action="" method="POST">
+							<section class="search-bar">
+								<input name="search" type="text" placeholder="What're you looking for ?" autocomplete="off">
+								<button type="submit"><i class="fa fa-search"></i></button>
+							</section>
+						</form>
 					</ul>
-					<form action="">
-						<input class="input-search" name="search" type="text" placeholder="What're you looking for ?" autocomplete="off">
-						<div class="button-search"><i class="fa fa-search" aria-hidden="true"></i></div>
-					</form>
 				</section>
 			</div>
 		</nav>
 	</header>
 	<main>
 		<div class="beam-menu">
-			<section class="container-beam col-3">
-				<i class="fa fa-star fa-2x" aria-hidden="true"></i>
-				<h2><b>CREATIVE DESIGN</b></h2>
-				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
-				<a href="#!">READ MORE</a>
-			</section>
-			<section class="container-beam col-3">
-				<i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
-				<h2><b>FULLY RESPONSIVE</b></h2>
-				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
-				<a href="#!">READ MORE</b></a>
-			</section>
-			<section class="container-beam col-3">
-				<i class="fa fa-arrows-alt fa-2x" aria-hidden="true"></i>
-				<h2><b>MULTIPURPOSE</b></h2>
-				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
-				<a href="#!">READ MORE</a>
-			</section>
-			<section class="container-beam col-3">
-				<i class="fa fa-cog fa-2x" aria-hidden="true"></i>
-				<h2><b>AWESOME FEATURES</b></h2>
-				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
-				<a href="#!">READ MORE</a>
-			</section>
+			<input type="radio" class="slider-point-1" name="slider" checked>
+			<span><section>1</section></span>
+			<input type="radio" class="slider-point-2" name="slider">
+			<span><section>2</section></span>
+			<input type="radio" class="slider-point-3" name="slider">
+			<span><section>3</section></span>
+			<input type="radio" class="slider-point-4" name="slider">
+			<span><section>4</section></span>
+			<ul>
+				<li class="col-3">
+					<i class="fa fa-star fa-2x" aria-hidden="true"></i>
+					<h2><b>CREATIVE DESIGN</b></h2>
+					<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
+					<a href="#!">READ MORE</a>
+				</li>
+				<li class="col-3">
+					<i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
+					<h2><b>FULLY RESPONSIVE</b></h2>
+					<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
+					<a href="#!">READ MORE</b></a>
+				</li>
+				<li class="col-3">
+					<i class="fa fa-arrows-alt fa-2x" aria-hidden="true"></i>
+					<h2><b>MULTIPURPOSE</b></h2>
+					<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
+					<a href="#!">READ MORE</a>
+				</li>
+				<li class="col-3">
+					<i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+					<h2><b>AWESOME FEATURES</b></h2>
+					<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the  when an unknown printer took a galley of type and scrambled.</h3>
+					<a href="#!">READ MORE</a>
+				</li>
+			</ul>
 		</div>
 		<div class="our-portfolio col-12">
 			<h1><b>OUR PORTFOLIO</b></h1>
 			<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</h3>
 			<ul>
-				<li><a class="active" href="#!">ALL</a></li>
-				<li><a href="#!">WEB DESIGN</a></li>
-				<li><a href="#!">GRAPHICS DESIGN</a></li>
-				<li><a href="#!">LOGO</a></li>
-				<li><a href="#!">PHOTOGRAPHY</a></li>
+				<li>
+				<a class="active" href="#!">ALL</a></li><li>
+				<a href="#!">WEB DESIGN</a></li><li>
+				<a href="#!">GRAPHICS DESIGN</a></li><li>
+				<a href="#!">LOGO</a></li><li>
+				<a href="#!">PHOTOGRAPHY</a></li>
 			</ul>
 			<section class="portfolio-pictures">
-				<section class="container-portfolio-images col-3">
-					<img src="./assets/images/portfolio-pictures/portfolio-1.jpg" alt="">
+				<section class="container-portfolio-images">
+					<section class="portfolio-normal"><img src="./assets/images/portfolio-pictures/portfolio-1.jpg" alt=""></section>
 				</section>
-				<section class="container-portfolio-images col-3">
+				<section class="container-portfolio-images">
 					<section class="portfolio-small"><img src="./assets/images/portfolio-pictures/portfolio-2.jpg" alt=""></section>
 					<section class="portfolio-small"><img src="./assets/images/portfolio-pictures/portfolio-3.jpg" alt=""></section>
 					<section class="portfolio-wide"><img src="./assets/images/portfolio-pictures/portfolio-4.jpg" alt=""></section>
 				</section>
-				<section class="container-portfolio-images col-3">
-					<img src="./assets/images/portfolio-pictures/portfolio-5.jpg" alt="">
+				<section class="container-portfolio-images">
+					<section class="portfolio-normal"><img src="./assets/images/portfolio-pictures/portfolio-5.jpg" alt=""></section>
 				</section>
-				<section class="container-portfolio-images col-3">
+				<section class="container-portfolio-images">
 					<section class="portfolio-wide"><img src="./assets/images/portfolio-pictures/portfolio-6.jpg" alt=""></section>
 					<section class="portfolio-small"><img src="./assets/images/portfolio-pictures/portfolio-7.jpg" alt=""></section>
 					<section class="portfolio-small"><img src="./assets/images/portfolio-pictures/portfolio-8.jpg" alt=""></section>
@@ -105,193 +139,207 @@
 			</section>
 			<a class="load-more">LOAD MORE<i class="fa fa-refresh fa-lg"></i></a>
 		</div>
-		<div class="get-started col-12">
+		<div class="get-started">
 			<img src="./assets/images/get-started.jpg" alt="">
 			<section class="container-get-started">
 				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever, when an unknown printer took to make a type specimen book.</h3>
 				<section class="container-button"><a class="ripple-effect" href="#!"><b>GET STARTED</b></a></section>
 			</section>
 		</div>
-		<div class="latest-news col-12">
+		<div class="latest-news">
 			<h1><b>LATEST NEWS</b></h1>
 			<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</h3>
-			<section class="beam-news col-12">
-				<section class="box-news">
-					<img src="./assets/images/latest-news/news-1.jpg" alt="">
-					<h5>24 JAN 2017</h5>
-					<a href="#!">Lorem Ipsum is simply dummy of the printing and typesetting 's   galley of type and it to make a type specimen book.</a>
-				</section>
-				<section class="box-news">
-					<img src="./assets/images/latest-news/news-2.jpg" alt="">
-					<h5>23 JAN 2017</h5>
-					<a href="#!">Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown and it to Lorem Ipsum.</a>
-				</section>
-				<section class="box-news">
-					<img src="./assets/images/latest-news/news-3.jpg" alt="">
-					<h5>22 JAN 2017</h5>
-					<a href="#!">Lorem Ipsum is simply dummy of the printing and typesetting 's   galley of type and it to make a type specimen book.</a>
-				</section>
-			</section>
+			<div class="wrapper2">
+				<ul class="beam-news">
+					<li>
+					<a href="#!">
+						<section class="box-news-thumb">
+							<img src="./assets/images/latest-news/news-1.jpg" alt="">
+							<span>Post 1</span>
+						</section>
+						<h5>24 JAN 2017</h5>
+						<p>Lorem Ipsum is simply dummy of the printing and typesetting 's   galley of type and it to make a type specimen book.</p>
+					</a></li><li>
+					<a href="#!">
+						<section class="box-news-thumb">
+							<img src="./assets/images/latest-news/news-2.jpg" alt="">
+							<span>Post 2</span>
+						</section>
+						<h5>23 JAN 2017</h5>
+						<p>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown and it to Lorem Ipsum.</p>
+					</a></li><li>
+					<a href="#!">
+						<section class="box-news-thumb">
+							<img src="./assets/images/latest-news/news-3.jpg" alt="">
+							<span>Post 3</span>
+						</section>
+						<h5>22 JAN 2017</h5>
+						<p>Lorem Ipsum is simply dummy of the printing and typesetting 's   galley of type and it to make a type specimen book.</p>
+					</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="our-team-member col-12">
 			<h1><b>OUR TEAM</b></h1>
 			<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</h3>
-			<section class="container-our-team-member col-12">
-				<section class="styling-our-team-member">
-					<img src="./assets/images/member/big-member-1.png" alt="">
-					<h2>JOHN DOE</h2>
-					<h5>Co - Founder</h5>
+			<div class="wrapper2">
+				<section class="container-our-team-member col-12">
+					<section class="styling-our-team-member">
+						<img src="./assets/images/member/big-member-1.png" alt="">
+						<h2>JOHN DOE</h2>
+						<h5>Co - Founder</h5>
+					</section>
+					<section class="styling-our-team-member">
+						<img src="./assets/images/member/big-member-2.png" alt="">
+						<h2>JOHN DOE</h2>
+						<h5>Co - Founder</h5>
+					</section>
+					<section class="styling-our-team-member">
+						<img src="./assets/images/member/big-member-3.png" alt="">
+						<h2>JANE ROE</h2>
+						<h5>Co - Founder</h5>
+					</section>
+					<section class="styling-our-team-member">
+						<img src="./assets/images/member/big-member-4.png" alt="">
+						<h2>JOHN DOE</h2>
+						<h5>Co - Founder</h5>
+					</section>
 				</section>
-				<section class="styling-our-team-member">
-					<img src="./assets/images/member/big-member-2.png" alt="">
-					<h2>JOHN DOE</h2>
-					<h5>Co - Founder</h5>
-				</section>
-				<section class="styling-our-team-member">
-					<img src="./assets/images/member/big-member-3.png" alt="">
-					<h2>JANE ROE</h2>
-					<h5>Co - Founder</h5>
-				</section>
-				<section class="styling-our-team-member">
-					<img src="./assets/images/member/big-member-4.png" alt="">
-					<h2>JOHN DOE</h2>
-					<h5>Co - Founder</h5>
-				</section>
-			</section>
+			</div>
 		</div>
 		<div class="our-skills">
 			<h1><b>OUR TEAM</b></h1>
 			<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</h3>
-			<section class="progress-bar">
+			<div class="wrapper2">
+				<section class="progress-bar col-12">
+					<ul>
+						<li>
+							<section class="container-progbar">
+								<section class="progress-text">
+									<p>PHOTOSHOP</p><p>90%</p>
+								</section>
+								<progress max="100" value="90"></progress>
+							</section>
+
+							<section class="container-progbar">
+								<section class="progress-text">
+									<p>ILLUSTRATOR</p><p>90%</p>
+								</section>
+								<progress max="100" value="90"></progress>
+							</section>
+
+							<section class="container-progbar">
+								<section class="progress-text">
+									<p>BRANDING</p><p>90%</p>
+								</section>
+								<progress max="100" value="90"></progress>
+							</section>
+						</li>
+						<li>
+							<section class="container-progbar">
+								<section class="progress-text">
+									<p>WEB DEVELOPMENT</p><p>90%</p>
+								</section>
+								<progress max="100" value="90"></progress>
+							</section>
+
+							<section class="container-progbar">
+								<section class="progress-text">
+									<p>WORDPRESS</p><p>90%</p>
+								</section>
+								<progress max="100" value="90"></progress>
+							</section>
+
+							<section class="container-progbar">
+								<section class="progress-text">
+									<p>PHOTOGRAPHY</p><p>90%</p>
+								</section>
+								<progress max="100" value="90"></progress>
+							</section>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<div class="counter-activity">
+			<div class="wrapper2">
 				<ul>
 					<li>
-						<section class="container-progbar">
-							<section class="progress-text">
-								<p class="font-semibold">PHOTOSHOP</p>
-								<p class="font-semibold">90%</p>
-							</section>
-							<progress max="100" value="90"></progress>
-						</section>
-
-						<section class="container-progbar">
-							<section class="progress-text">
-								<p class="font-semibold">ILLUSTRATOR</p>
-								<p class="font-semibold">90%</p>
-							</section>
-							<progress max="100" value="90"></progress>
-						</section>
-
-						<section class="container-progbar">
-							<section class="progress-text">
-								<p class="font-semibold">BRANDING</p>
-								<p class="font-semibold">90%</p>
-							</section>
-							<progress max="100" value="90"></progress>
+						<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+						<section class="container-activity-text">
+							<h3 class="font-semibold">25,646</h3>
+							<h5 class="font-semibold">HAPPY CUSTOMERS</h5>
 						</section>
 					</li>
 					<li>
-						<section class="container-progbar">
-							<section class="progress-text">
-								<p class="font-semibold">WEB DEVELOPMENT</p>
-								<p class="font-semibold">90%</p>
-							</section>
-							<progress max="100" value="90"></progress>
+						<i class="fa fa-clock-o fa-2x" aria-hidden="true"></i>
+						<section class="container-activity-text">
+							<h3 class="font-semibold">95,672</h3>
+							<h5 class="font-semibold">HOURS IN WORK</h5>
 						</section>
-
-						<section class="container-progbar">
-							<section class="progress-text">
-								<p class="font-semibold">WORDPRESS</p>
-								<p class="font-semibold">90%</p>
-							</section>
-							<progress max="100" value="90"></progress>
+					</li>
+					<li>
+						<i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
+						<section class="container-activity-text">
+							<h3 class="font-semibold">64,862</h3>
+							<h5 class="font-semibold">WEB PAGES</h5>
 						</section>
-
-						<section class="container-progbar">
-							<section class="progress-text">
-								<p class="font-semibold">PHOTOGRAPHY</p>
-								<p class="font-semibold">90%</p>
-							</section>
-							<progress max="100" value="90"></progress>
+					</li>
+					<li>
+						<i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+						<section class="container-activity-text">
+							<h3 class="font-semibold">8,794</h3>
+							<h5 class="font-semibold">PROJECTS</h5>
 						</section>
 					</li>
 				</ul>
-			</section>
-		</div>
-		<div class="counter-activity">
-			<ul>
-				<li>
-					<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
-					<section class="container-activity-text">
-						<h3 class="font-semibold">25,646</h3>
-						<h5 class="font-semibold">HAPPY CUSTOMERS</h5>
-					</section>
-				</li>
-				<li>
-					<i class="fa fa-clock-o fa-2x" aria-hidden="true"></i>
-					<section class="container-activity-text">
-						<h3 class="font-semibold">95,672</h3>
-						<h5 class="font-semibold">HOURS IN WORK</h5>
-					</section>
-				</li>
-				<li>
-					<i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
-					<section class="container-activity-text">
-						<h3 class="font-semibold">64,862</h3>
-						<h5 class="font-semibold">WEB PAGES</h5>
-					</section>
-				</li>
-				<li>
-					<i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
-					<section class="container-activity-text">
-						<h3 class="font-semibold">8,794</h3>
-						<h5 class="font-semibold">PROJECTS</h5>
-					</section>
-				</li>
-			</ul>
+			</div>
 		</div>
 		<div class="our-team-quotes">
 			<h1><b>OUR TEAM</b></h1>
 			<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</h3>
-			<section class="container-our-team-quotes">
-				<ul>
-					<li>
-						<i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>
-						<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever the  when an printing typesetting industryunknown.</h3>
-						<section>
-							<img src="./assets/images/member/tiny-member-1.png" alt="">
-							<div>
-								<h4 class="font-semibold">JOHN DOE</h4>
-								<h5>Company name</h5>
-							</div>
-						</section>
-					</li>
-					<li>
-						<i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>
-						<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever the  when an printing typesetting industryunknown.</h3>
-						<section>
-							<img src="./assets/images/member/tiny-member-2.png" alt="">
-							<div>
-								<h4 class="font-semibold">JOHN DOE</h4>
-								<h5>Company name</h5>
-							</div>
-						</section>
-					</li>
-					<li>
-						<i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>
-						<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever the  when an printing typesetting industryunknown.</h3>
-						<section>
-							<img src="./assets/images/member/tiny-member-3.png" alt="">
-							<div>
-								<h4 class="font-semibold">JOHN DOE</h4>
-								<h5>Company name</h5>
-							</div>
-						</section>
-					</li>
-				</ul>
-			</section>
+			<div class="wrapper2">
+				<section class="container-our-team-quotes col-12">
+					<ul>
+						<li>
+							<i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>
+							<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever the  when an printing typesetting industryunknown.</h3>
+							<section>
+								<img src="./assets/images/member/tiny-member-1.png" alt="">
+								<div>
+									<h4 class="font-semibold">JOHN DOE</h4>
+									<h5>Company name</h5>
+								</div>
+							</section>
+						</li>
+						<li>
+							<i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>
+							<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever the  when an printing typesetting industryunknown.</h3>
+							<section>
+								<img src="./assets/images/member/tiny-member-2.png" alt="">
+								<div>
+									<h4 class="font-semibold">JOHN DOE</h4>
+									<h5>Company name</h5>
+								</div>
+							</section>
+						</li>
+						<li>
+							<i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>
+							<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever the  when an printing typesetting industryunknown.</h3>
+							<section>
+								<img src="./assets/images/member/tiny-member-3.png" alt="">
+								<div>
+									<h4 class="font-semibold">JOHN DOE</h4>
+									<h5>Company name</h5>
+								</div>
+							</section>
+						</li>
+					</ul>
+				</section>
+			</div>
 		</div>
 		<div class="web-customer">
-			<img src="./assets/images/background-city.png" alt="">
+			<img src="./assets/images/background-city.png" alt="" class="web-customer-background">
 			<section class="container-web-customer">
 				<h1><b>OUR CUSTOMERS</b></h1>
 				<h3>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</h3>
@@ -307,67 +355,90 @@
 			</section>
 		</div>
 		<div class="web-tweet">
-			<ul>
-				<li>
-					<h2 class="font-semibold">ABOUT <a href="index.html">MYLAB</a></h2>
-					<h4>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.Lorem Ipsum is simply dummy of the printing and typeset ting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of a type specimen book.</h4>
-					<a href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-					<a href="#!"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-					<a href="#!"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-					<a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-				</li>
-				<li>
-					<h2 class="font-semibold">LATEST TWEET</h2>
-					<a href="#!"><span><i class="fa fa-twitter" aria-hidden="true"></i>@myLab</span> Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown.</a>
-					<a href="#!"><span><i class="fa fa-twitter" aria-hidden="true"></i>@myLab</span> Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since  when an unknown.</a>
-					<a href="#!"><span><i class="fa fa-twitter" aria-hidden="true"></i>@myLab</span> dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown.</a>
-				</li>
-				<li>
-					<h2 class="font-semibold">LATEST BLOG</h2>
-					<section class="web-tweet-post">
-						<a href="#!">
-							<img src="./assets/images/post-thumb/post-1.png" alt="">
-							<h5>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the.</h5>
-						</a>
-					</section>
-					<section class="web-tweet-post">
-						<a href="#!">
-							<img src="./assets/images/post-thumb/post-2.png" alt="">
-							<h5>Lorem Ipsum is simply dummy of the printing and typesetting 's dummy text ever since the.</h5>
-						</a>
-					</section>
-					<section class="web-tweet-post">
-						<a href="#!">
-							<img src="./assets/images/post-thumb/post-3.png" alt="">
-							<h5>Simply dummy of the printing and typesetting 's standard dummy text ever since the.</h5>
-						</a>
-					</section>
-				</li>
-			</ul>
+			<div class="wrapper2">
+				<ul>
+					<li>
+						<h2 class="font-semibold">ABOUT <a href="index.html">MYLAB</a></h2>
+						<h4>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.Lorem Ipsum is simply dummy of the printing and typeset ting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of a type specimen book.</h4>
+						<a href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+						<a href="#!"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+						<a href="#!"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+						<a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</li>
+					<li>
+						<h2 class="font-semibold">LATEST TWEET</h2>
+						<a href="#!"><span><i class="fa fa-twitter" aria-hidden="true"></i>@myLab</span> Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown.</a>
+						<a href="#!"><span><i class="fa fa-twitter" aria-hidden="true"></i>@myLab</span> Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since  when an unknown.</a>
+						<a href="#!"><span><i class="fa fa-twitter" aria-hidden="true"></i>@myLab</span> dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown.</a>
+					</li>
+					<li>
+						<h2 class="font-semibold">LATEST BLOG</h2>
+						<section class="web-tweet-post">
+							<a href="#!">
+								<img src="./assets/images/post-thumb/post-1.png" alt="">
+								<h5>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the.</h5>
+							</a>
+						</section>
+						<section class="web-tweet-post">
+							<a href="#!">
+								<img src="./assets/images/post-thumb/post-2.png" alt="">
+								<h5>Lorem Ipsum is simply dummy of the printing and typesetting 's dummy text ever since the.</h5>
+							</a>
+						</section>
+						<section class="web-tweet-post">
+							<a href="#!">
+								<img src="./assets/images/post-thumb/post-3.png" alt="">
+								<h5>Simply dummy of the printing and typesetting 's standard dummy text ever since the.</h5>
+							</a>
+						</section>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div id="google-maps" style="width: 100%; height: 330px;">
-			
-		</div>
+		<div id="google-maps"></div>
 	</main>
 	<footer>
-		<section class="wrapper-footer">
+		<div class="wrapper3">
 			<h5>All Rights Reserved © myLab</h5>
-			<ul>
-				<li><a href="#!">HOME</a></li>
-				<li><a href="#!">PORTFOLIO</a></li>
-				<li><a href="#!">BLOG</a></li>
-				<li><a href="#!">SHOP</a></li>
-				<li><a href="#!">PAGES</a></li>
-				<li><a href="#!">FEATURES</a></li>
-				<li><a href="#!">SHORTCODES</a></li>
-				<li><a href="#!">CONTACT</a></li>
-			</ul>
-		</section>
+			<section class="menu">
+				<ul id="link-menu">
+					<li>
+					<a class="active" href="#!">HOME</a></li><li>
+					<a href="#!">PORTFOLIO</a></li><li>
+					<a href="#!">BLOG</a></li><li>
+					<a href="#!">SHOP</a></li><li>
+					<a href="#!">PAGES</a></li><li>
+					<a href="#!">FEATURES</a></li><li>
+					<a href="#!">CONTACT</a></li><li class="button-dropdown">
+					<a href="javascript:void(0)" class="dropdown-toggle">DROPDOWN TEST</a>
+						<ul class="dropdown-menu">
+							<li>
+							<a href="#!">SUB MENU 1</a></li><li>
+							<a href="#!">SUB MENU 2</a></li><li>
+							<a href="#!">SUB MENU 3</a></li><li>
+							<a href="#!">SUB MENU 4</a></li><li class="button-dropdown">
+							<a href="javascript:void(0)" class="dropdown-toggle">SUB MENU 5</a>
+								<ul class="dropdown-menu">
+									<li>
+									<a href="#!">PARENT MENU 1</a></li><li>
+									<a href="#!">PARENT MENU 2</a></li><li>
+									<a href="#!">PARENT MENU 3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</div>
 	</footer>
 </body>
 <script>
+	window.onbeforeunload = function(){ window.scrollTo(0,0); }
+	/*///////////////////////
+	// Google Maps: Embed! //
+	///////////////////////*/
 	function initMap() {
 		var map = new google.maps.Map(document.getElementById('google-maps'), {
 			center: {lat: -34.397, lng: 150.644},
@@ -400,27 +471,181 @@
 		'Error: Your browser doesn\'t support geolocation.');
 	}
 
-	window.onbeforeunload = function(){ window.scrollTo(0,0); }
+	/*/////////////////////////////
+	// List Item menu if Clicked //
+	/////////////////////////////*/
 	$(function() {
-		var selector = 'nav ul li a';
+		/* var selector = 'nav ul li:not(.button-dropdown) a'; */
+		var selector = 'body header nav div.wrapper section.menu ul#link-menu li:not(.button-dropdown) a';
+		var selector2 = 'body footer div.wrapper3 section.menu ul#link-menu li:not(.button-dropdown) a';
+
 		$(selector).on('click', function(){
 			$(selector).removeClass('active');
 			$(this).addClass('active');
 		});
 		
-		var selector2 = '.our-portfolio ul li a';
+		$("body header nav div.wrapper section.menu ul#link-menu li.button-dropdown a.dropdown-toggle").on('click', function(){
+			$(selector).removeClass('active');
+		});
+		
 		$(selector2).on('click', function(){
 			$(selector2).removeClass('active');
+			$(this).addClass('active');
+		});
+
+		$("body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown a.dropdown-toggle").on('click', function(){
+			$(selector2).removeClass('active');
+		});
+		
+		$(".our-portfolio ul li a").on('click', function(){
+			$(".our-portfolio ul li a").removeClass('active');
 			$(this).addClass('active');
 		});
 
 		$(".load-more").click(function() {
 			$(".load-more i").toggleClass("fa-spin");
 		});
-
-		$(".button-search").click(function() {
-			$(".button-search i").toggleClass("active");
-		});
 	});
+
+	/*//////////////////////////////////
+	// Responsive Nav menu if clicked //
+	//////////////////////////////////*/
+	$(window).on("click",function() {
+		var menu_section = document.getElementById('link-menu');
+		if (menu_section.style.display != 'none' && $(window).width() <= 760) {
+			menu_section.style.display = 'none';
+			button_menu.style.backgroundImage = 'url(./assets/images/menu-icon.png)'
+		}
+	});
+
+	$("body header nav div.wrapper section.menu ul#link-menu").click(function() {
+		event.stopPropagation();
+	});
+
+	var button_menu = document.getElementById('menu-button');
+	$("#menu-button").on("click",function(event) {
+		event.stopPropagation();
+		var menu_section = document.getElementById('link-menu');
+		if (menu_section.style.display == 'block') {
+			
+			menu_section.style.display = 'none';
+			button_menu.style.backgroundImage = 'url(./assets/images/menu-icon.png)';
+		} else {
+			menu_section.style.display = 'block';
+			button_menu.style.backgroundImage = 'url(./assets/images/close-icon.png)';
+		}
+	});
+
+	/*//////////////////////////////
+	// Dropdown on click function //
+	//////////////////////////////*/
+	jQuery(document).ready(function (e) {
+	    function t(t) {
+	        e(t).bind("click", function (t) {
+	            t.preventDefault();
+	            e(this).parent().fadeOut()
+	        })
+	    }
+	    e("body header nav .dropdown-toggle").click(function (event) {
+			event.stopPropagation();
+			var noDropdown_list = $(this).parent().parent().children("li:not(.button-dropdown)");
+			var submenu = $(this).parent().children(".dropdown-menu");
+			var width = $(window).width(); 
+
+			if(submenu.is(":hidden")) {
+				$(this).addClass("active");
+				submenu.show(); 
+			}else {
+				$(this).removeClass("active");
+				submenu.hide();
+			}
+
+			if(width <= 760) {
+				if(submenu.is(":hidden")) {
+					$(noDropdown_list).css("display", "block");
+				} else {
+					$(noDropdown_list).css("display", "none");
+				}
+			}
+	    	/*
+	        var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
+	        e(".button-dropdown .dropdown-menu").hide();
+	        e(".button-dropdown .dropdown-toggle").removeClass("active");
+	        if (t) {
+	            e(this).parents(".button-dropdown").children(".dropdown-menu").toggle().parents(".button-dropdown").children(".dropdown-toggle").addClass("active")
+	        }*/
+	    }); 
+	    e("body footer .dropdown-toggle").click(function (event) {
+			event.stopPropagation();
+			var submenu = $(this).parent().children(".dropdown-menu");
+			var width = $(window).width(); 
+
+			if(submenu.is(":hidden")) {
+				$(this).addClass("active");
+				submenu.show(); 
+			}else {
+				$(this).removeClass("active");
+				submenu.hide();
+			}
+	    }); 
+	    e('ul li:not(.button-dropdown) a').click(function (event) {
+			$(this).parent().parent().find(".dropdown-toggle").removeClass("active");
+			$(this).parent().parent().find(".dropdown-menu").hide();
+	    });
+	    e(document).bind("click", function (t) {
+	        var n = e(t.target);
+	        if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-menu").hide();
+	    });
+	    e(document).bind("click", function (t) {
+	        var n = e(t.target);
+	        if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("active");
+	    })
+	});
+
+	/*///////////////////////////////////
+	// Script on windows/browser scale //
+	///////////////////////////////////*/
+	var jqUpdateSize = function (e) {
+		width = $(window).width();
+		noDropdown_list = 'body header nav li:not(.button-dropdown)';
+		menu_section = document.getElementById('link-menu');
+
+	    if(width <= 760) {
+	        slider = $('.beam-news').bxSlider({
+		        slideMargin: 50,
+		        pager: true,
+		        pagerType: 'short',
+		        controls: false,
+		        infiniteLoop: false,
+		        useCSS: false,
+		        easing: 'swing'
+
+		    });
+
+	        slider2 = $('.container-our-team-quotes ul').bxSlider({
+		        auto: true,
+		        pause: 5000,
+		        touchEnabled: false,
+		        slideMargin: 50,
+		        pager: true,
+		        pagerType: 'short',
+		        controls: false,
+		        infiniteLoop: true,
+		        easing: 'swing'
+		    });
+		    $(noDropdown_list).css("display", "block");
+	    }else{
+	    	if (slider != undefined) {
+	    		slider.destroySlider();
+	    		slider2.destroySlider();
+	    	}
+	    	$(noDropdown_list).css("display", "inline-block");
+	    	menu_section.style.display = 'block';
+		}
+	};
+	var slider, slider2;
+    $(document).ready(jqUpdateSize);
+    $(window).resize(jqUpdateSize);
+    
 </script>
 </html>

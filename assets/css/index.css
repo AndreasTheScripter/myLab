@@ -1,12 +1,11 @@
-@font-face { font-family: 'Hind Regular'; src: url('../fonts/Hind-Regular.ttf') format('truetype'); }
+@import url('https://fonts.googleapis.com/css?family=Hind:400,600');
 
 * { padding: 0; margin: 0; }
+html, body { height: 100%; }
 html, html a { text-rendering: auto; -webkit-font-smoothing: antialiased; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-body { font-family: 'Hind Regular'; }
-
-.font-semibold { font-weight: 600; }
+body { font-family: 'Hind', sans-serif; }
 
 .col-1 { width: 8.33%; }
 .col-2 { width: 16.66%; }
@@ -22,172 +21,834 @@ body { font-family: 'Hind Regular'; }
 .col-12 { width: 100%; }
 
 .wrapper { margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 40px 0; transition: all ease .5s; }
-.clear { clear: both; }
-
-/* HEADER STYLING */
-header { width: 100%; height: 100vh; }
-#header-slideshow { position: relative; }
-.header-desc { display: block; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; }
-.header-desc h2 { color: #fff; font-size: 20px; font-weight: normal; }
-.header-desc h1 { color: #fff; font-size: 40px; }
-.header-desc h3 { color: #ccc; font-size: 16px; font-weight: normal; width: 800px; margin-bottom: 15px; }
-.container-button { display: inline-block; overflow: hidden; position: relative; border-radius: 3px; }
-.header-desc a { color: #fff; font-size: 12px; font-weight: bold; outline: 0; border: 0; border-radius: 3px; display: inline-block; padding: 8px 27px; background-color: #03a9f4; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
-.header-desc a:hover { text-decoration: none; }
-.header-desc a:active { background-color: #0381ba; }
-nav { z-index: 2; position: fixed; width: 100%; top: 0; transition: all ease .5s; }
-nav.shrink { margin: 0; background-color: rgba(0, 0, 0, 0.8); transition: all ease .5s; }
-nav.shrink .wrapper { width: 96%; padding: 10px 0; transition: all ease .5s; }
-nav.shrink ul li a.active { border-color: transparent; color: #03a9f4; }
-nav.shrink ul li a:not(.active):hover { border-color: transparent; color: #ffb72e; }
-nav ul { list-style: none; border-right: solid 1px #fff; display: inline; }
-nav ul li { display: inline-block; }
-nav ul li:last-child { margin-right: 10px; }
-nav ul li a { font-size: 12px; padding: 3px 15px; color: #fff; border-bottom: solid 2px; border-color: transparent; transition: ease-in-out 0.33s; }
-nav ul li a.active { border-color: #03a9f4; text-decoration: none; }
-nav ul li a:not(.active):hover { border-color: #ffb72e; text-decoration: none; }
-nav form { display: inline-flex; margin-left: 10px; }
-.input-search { max-width: 0; opacity: 0; height: 20px; padding: 0px 5px; border: none; border-bottom: 1px solid #03a9f4; outline: none; background: none; color: #fff; transition: all .8s cubic-bezier(0.500, 0.795, 0.000, 0.960); cursor: default; }
-.input-search.expanded { opacity: 1; max-width: 150px; cursor: text; }
-.button-search { height: 20px; padding: 0 10px; border: none; outline: none; background: none; cursor: pointer; border-bottom: solid 1px; border-color: transparent; transition: all .8s cubic-bezier(0.500, 0.795, 0.000, 0.960); }
-.button-search.borderless { border-color: #03a9f4; }
-.button-search i { color: #fff; transition: ease-in-out 0.33s; }
-.button-search:hover > i { color: #ffb72e; }
-.button-search i.active { color: #03a9f4; }
-
-/* MAIN STYLING */
-.beam-menu { display: flex; position: relative; }
-.container-beam { text-align: center; }
-.container-beam i { color: #fff; border-radius: 3px; background-color: #03a9f4; padding: 10px 13px; margin: 30px 0 20px 0; cursor: default; }
-.container-beam h2 { font-size: 18px; color: #212121; margin-bottom: 9px; }
-.container-beam h3 { font-size: 12px; color: #727272; width: 90%; margin: auto; }
-.container-beam a { width: 30%; display: block; margin: auto; margin-top: 15px; margin-bottom: 15px; font-weight: bold; font-size: 13px; color: #03a9f4; vertical-align: middle; transition: ease-in-out 0.1s; }
-.container-beam a:after { content: '\f054'; padding-left: 5px; font-family: FontAwesome; color: #03a9f4; font-size: 16px; vertical-align: inherit; transition: ease-in-out 0.1s; }
-.container-beam a:hover { text-decoration: none; color: #ff9800; }
-.container-beam a:hover:after { color: #ff9800; }
-.container-beam:first-child, .container-beam:nth-child(3) { background-color: #f0fafe; }
-.container-beam:nth-child(2), .container-beam:last-child { background-color: #f7fcff; }
-
-.our-portfolio { text-align: center; position: relative; background-color: #fff; overflow: auto; }
-.our-portfolio h1 { font-size: 27px; margin: 65px 0 8px 0; }
-.our-portfolio h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
-.our-portfolio ul { list-style: none; margin-bottom: 20px; }
-.our-portfolio ul li { display: inline-block; padding: 20px 16px; }
-.our-portfolio ul li a { font-size: 13px; font-weight: bold; color: #03a9f4; transition: all ease .2s; }
-.our-portfolio ul li a.active { text-decoration: none; color: #212121; border-bottom: solid 2px #03a9f4; padding: 0 20px 5px 20px; }
-.our-portfolio ul li a:not(.active):hover { text-decoration: none; color: #ff9800; }
-.portfolio-pictures { display: flex; }
-.container-portfolio-images { height: 300px; background-color: #000; }
-.container-portfolio-images img { width: 100%; height: 100%; display: block; }
-.portfolio-small { float: left; width: 50%; height: 50%; }
-.portfolio-small img { width: 100%; height: 100%; display: block; }
-.portfolio-wide { float: left; width: 100%; height: 50%; }
-.portfolio-wide img { width: 100%; height: 100%; display: block; }
-.our-portfolio .load-more { font-weight: bold; color: #03a9f4; display: block; margin-top: 30px; margin-bottom: 60px; cursor: pointer; vertical-align: middle; text-decoration: none; transition: all ease .2s; }
-.our-portfolio .load-more:hover { color: #ff9800; }
-.our-portfolio .load-more i { font-size: 22px; margin-left: 10px; }
-
-.get-started { position: relative; }
-.get-started img { width: 100%; display: block; }
-.container-get-started { display: block; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; }
-.get-started h3 { font-weight: normal; color: #ccc; width: 60%; margin: auto; margin-bottom: 15px; }
-.get-started a { color: #fff; font-size: 12px; font-weight: bold; outline: 0; border: 0; border-radius: 3px; padding: 8px 27px; display: inline-block; background-color: #03a9f4; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
-.get-started a:hover { text-decoration: none; }
-.get-started a:active { background-color: #0381ba; }
-
-.latest-news { text-align: center; position: relative; background-color: #fff; }
-.latest-news h1 { font-size: 27px; margin: 40px 0 10px 0; }
-.latest-news h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
-.beam-news { display: flex; justify-content: center; margin-top: 20px; margin-bottom: 40px; }
-.box-news { width: 28%; margin: 0 10px; }
-.box-news img { width: 100%; }
-.box-news h5 { font-weight: normal; font-size: 12px; color: #727272; margin: 20px 0 10px 0; }
-.box-news a { text-decoration: none; font-weight: bold; font-size: 18px; color: #03a9f4; transition: all ease .2s; }
-.box-news a:hover { color: #ff9800; }
-
-.our-team-member { text-align: center; position: relative; background-color: #f0fafe; padding: 10px 0; }
-.our-team-member h1 { font-size: 27px; margin: 40px 0 10px 0; }
-.our-team-member h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
-.container-our-team-member { display: flex; justify-content: center; margin-top: 20px; margin-bottom: 40px; }
-.styling-our-team-member { width: 15%; margin: 0 10px; }
-.styling-our-team-member img { width: 100%; }
-.styling-our-team-member h2 { text-decoration: none; font-weight: bold; font-size: 15px; color: #212121; margin-top: 10px; }
-.styling-our-team-member h5 { font-weight: normal; font-size: 12px; color: #727272; margin: 5px 0 5px 0; }
-
-.our-skills { text-align: center; position: relative; background-color: #fff; padding: 58px 0; }
-.our-skills h1 { font-size: 27px; margin: 0; padding: 0; }
-.our-skills h3 { font-size: 12px; color: #212121; width: 650px; margin: 10px auto 20px auto; }
-.progress-bar ul { list-style: none; }
-.progress-bar ul li { display: inline-block; width: 35%; margin: 0 7px; }
-/* .progress-bar ul li:last-child progress { direction: rtl; } */
-.container-progbar { width: 100%; margin-bottom: 20px; }
-.container-progbar:last-child { margin-bottom: 0; }
-.progress-text { display: flex; justify-content: space-between; margin: 0 0 5px 0; padding: 0; }
-.container-progbar progress { display: block; width: 100%; height: 20px; background-color: #b3e5fc; color: #03a9f4; border: none; outline: none; }
-.container-progbar progress::-moz-progress-bar { background-color: #03a9f4; }
-.container-progbar progress::-webkit-progress-bar { background-color: #b3e5fc; }
-.container-progbar progress::-webkit-progress-value { background-color: #03a9f4; }
-
-.counter-activity { background-color: #ff9800; display: flex; justify-content: center; align-items: center; padding: 50px 0; }
-.counter-activity ul { list-style: none; position: relative; }
-.counter-activity ul li { float: left; display: flex; align-items: center; margin: 0 30px; color: #fff; }
-.counter-activity ul li i { color: #ff9800; padding: 10px 13px; background-color: #fff; border-radius: 3px; }
-.container-activity-text { margin-left: 20px; }
-.container-activity-text h3 { font-size: 25px; letter-spacing: 2px; }
-.container-activity-text h5 { font-size: 9px; letter-spacing: 1px; }
-
-.our-team-quotes { text-align: center; position: relative; background-color: #fff; padding: 45px 0; }
-.our-team-quotes h1 { font-size: 27px; margin-bottom: 10px; }
-.our-team-quotes h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
-.container-our-team-quotes { display: flex; justify-content: center; align-items: center; }
-.container-our-team-quotes ul { list-style: none; position: relative; }
-.container-our-team-quotes ul li { float: left; }
-.container-our-team-quotes ul li i { margin: 30px 0; color: #03a9f4; }
-.container-our-team-quotes ul li h3 { width: 250px; margin-bottom: 25px; color: #212121; }
-.container-our-team-quotes ul li section { display: flex; justify-content: center; align-items: center; }
-.container-our-team-quotes ul li section img { width: 50px; height: 50px; }
-.container-our-team-quotes ul li section div { text-align: left; margin-left: 13px; }
-.container-our-team-quotes ul li section div h4 { font-size: 14px; color: #212121; letter-spacing: 1px; }
-.container-our-team-quotes ul li section div h5 { font-size: 12px; color: #727272; }
-
-.web-customer { position: relative; }
-.web-customer img { width: 100%; display: block; }
-.container-web-customer { display: block; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; }
-.container-web-customer h1 { color: #fff; font-size: 27px; margin-bottom: 10px; }
-.container-web-customer h3 { color: #c2c2c2; font-size: 12px; margin: auto; font-weight: normal; width: 650px; margin-bottom: 35px; }
-.container-web-customer section { display: flex; justify-content: center; align-items: center;}
-.container-web-customer ul { list-style: none; position: relative; }
-.container-web-customer ul li { float: left; margin: 0 26px; }
-.container-web-customer ul li a { text-decoration: none; }
-.container-web-customer ul li a img { width: 75%; }
-
-.web-tweet { background-color: #212121; display: flex; justify-content: center; align-items: center; padding: 50px 0; }
-.web-tweet ul { list-style: none; }
-.web-tweet ul li { float: left; position: relative; width: 300px; margin: 0 20px; }
-.web-tweet ul li:first-child i { color: #fff; padding: 10px 10px; border-radius: 3px; background-color: #03a9f4; display: block; float: left; margin-right: 5px; transition: all ease .5s; margin-top: 20px; }
-.web-tweet ul li:first-child i:hover { background-color: #ff9800; }
-.web-tweet ul li h2 { font-size: 14px; color: #fff; margin-bottom: 13px; }
-.web-tweet ul li h2 a { color: #b3e5fc; transition: all ease .5s; text-decoration: none; }
-.web-tweet ul li h2 a:hover { color: #0079b1; }
-.web-tweet ul li h4, .web-tweet ul li a, .web-tweet ul li section a h5 { font-weight: normal; font-size: 13px; text-align: justify; color: #fff; line-height: 25px; }
-.web-tweet ul li:nth-child(2) a { margin-bottom: 15px; text-decoration: none; display: block; transition: all ease .5s; }
-.web-tweet ul li:nth-child(2) a:hover > span { color: #ff9800; transition: all ease .5s; }
-.web-tweet ul li:nth-child(2) a:after { content: " 5 minutes ago"; color: #727272; }
-.web-tweet ul li:nth-child(2) a span { color: #03a9f4; }
-.web-tweet ul li:nth-child(2) a span i { margin-right: 3px; }
-.web-tweet ul li .web-tweet-post a { display: flex; align-items: center; text-decoration: none; }
-.web-tweet ul li .web-tweet-post a:hover > h5 { color: #ff9800; transition: all ease .5s; }
-.web-tweet ul li .web-tweet-post a h5 { color: #03a9f4; margin-left: 20px; }
-.web-tweet ul li .web-tweet-post { margin-bottom: 20px; }
-
-footer { background-color: #212121; overflow: hidden; }
-.wrapper-footer { width: 85%; margin: 30px auto; display: flex; justify-content: space-between; align-items: center; }
-.wrapper-footer h5 { color: #fff; font-weight: normal; }
-.wrapper-footer ul { list-style: none; }
-.wrapper-footer ul li { font-size: 13px; float: left; padding: 0px 15px; }
-.wrapper-footer ul li a { text-decoration: none; color: #fff; transition: all ease .5s; }
-.wrapper-footer ul li a:hover { color: #ff9800; }
+.wrapper2 { margin: auto; width: 75%; overflow: hidden; }
+.wrapper3 { margin: auto; width: 75%; }
 
 .ink { display: block; position: absolute; background: hsl(180, 40%, 80%); border-radius: 100%; transform: scale(0); }
 .ink.animate { animation: ripple 0.6s linear; }
 @keyframes ripple {	100% { opacity: 0; transform: scale(2.5); } }
+
+/*=========
+|| START ||
+=========*/
+
+/*/////////////////////////
+///////////////////////////
+////                   ////
+////  STYLING:         ////
+////  <body>           ////
+////      <header>     ////
+////         ...       ////
+////      </header>    ////
+////  </body>          ////
+////                   ////
+///////////////////////////
+/////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////
+// For a welcome part of the header (+Including with background slideshow) //
+///////////////////////////////////////////////////////////////////////////*/
+body header { width: 100%; height: 100vh; }
+body header div#header-slideshow { position: relative; }
+body header div#header-slideshow img { width: 100%; height: 100vh; display: block; object-fit: cover; object-position: center; }
+body header div#header-slideshow section.header-desc { width: 65%; display: block; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; }
+body header div#header-slideshow section.header-desc h2 { color: #fff; font-size: 20px; font-weight: normal; }
+body header div#header-slideshow section.header-desc h2 span { font-weight: 600; }
+body header div#header-slideshow section.header-desc h1 { color: #fff; font-size: 40px; font-weight: 600; }
+body header div#header-slideshow section.header-desc h3 { color: #ccc; font-size: 16px; font-weight: normal; margin: 0 auto 15px auto; }
+body header div#header-slideshow section.header-desc section.container-button { display: inline-block; overflow: hidden; position: relative; border-radius: 3px; }
+body header div#header-slideshow section.header-desc section.container-button a.ripple-effect { color: #fff; font-size: 12px; font-weight: bold; outline: 0; border: 0; border-radius: 3px; display: inline-block; padding: 8px 27px; background-color: #03a9f4; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
+body header div#header-slideshow section.header-desc section.container-button a.ripple-effect:hover { text-decoration: none; }
+body header div#header-slideshow section.header-desc section.container-button a.ripple-effect:active { background-color: #0381ba; }
+/*////////////////////////////////////////////////////////////
+// For navbar (+Including with dropDown and searchBar menu) //
+////////////////////////////////////////////////////////////*/
+body header nav { z-index: 9999; position: fixed; width: 100%; top: 0; transition: all ease .5s; }
+body header nav div.wrapper section.menu { /* display: flex; justify-content: space-between; align-items: center; */ }
+body header nav div.wrapper section.menu section#menu-button { display: none; width: 30px; height: 25px; background: url(../images/menu-icon.png) center; transition: all .5s ease; }
+body header nav div.wrapper section.menu ul#link-menu { list-style: none; }
+body header nav div.wrapper section.menu ul#link-menu li { display: inline-block; position: relative; }
+body header nav div.wrapper section.menu ul#link-menu li a { font-size: 12px; font-weight: 600; padding: 3px 15px; color: #fff; border-bottom: solid 2px; border-color: transparent; transition: ease-in-out 0.33s; }
+body header nav div.wrapper section.menu ul#link-menu li a.active { border-color: #03a9f4; text-decoration: none; }
+body header nav div.wrapper section.menu ul#link-menu li a:not(.active):hover { border-color: #ffb72e; text-decoration: none; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown a.dropdown-toggle.active { border-bottom-width: 4px; border-bottom-color: #03a9f4; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu { list-style: none; background-color: #f8f8f8; display: none; position: absolute; top: 122%; right: 0; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu.active { display: block; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li { margin: 0; padding: 0; width: 100%; height: 100%; float: none; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li:last-of-type { border: 0; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a { margin: 0; display: block; color: #777777; padding: 10px 0; text-align: center; border: 0; outline: 0; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active { background-color: #03a9f4; color: #eee; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown a.dropdown-toggle.active {  }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu { list-style: none; background-color: #f8f8f8; display: none; position: absolute; top: 0; right: 100%; width: 100%; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu.active { display: block; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li { margin: 0; padding: 0; width: 100%; height: 100%; float: none; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li:last-of-type { border: 0; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a { margin: 0; display: block; color: #777777; padding: 10px 0; text-align: center; border: 0; outline: 0; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active { background-color: #03a9f4; color: #eee; }
+body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+body header nav.shrink { margin: 0; background-color: #000; transition: all ease .5s; }
+body header nav.shrink div.wrapper { width: 96%; padding: 10px 0; transition: all ease .5s; }
+body header nav.shrink div.wrapper section.menu ul#link-menu li a.active { border-color: transparent; color: #03a9f4; }
+body header nav.shrink div.wrapper section.menu ul#link-menu li a:not(.active):hover { border-color: transparent; color: #ffb72e; }
+body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a, body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a { color: #777777; }
+body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active, body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active { color: #eee; }
+.button-dropdown { position: relative; }
+.dropdown-toggle:before { content: '\f067'; font-family: FontAwesome; margin-right: 10px; vertical-align: middle; }
+.dropdown-toggle.active:before { content: '\f068'; font-family: FontAwesome; margin-right: 10px; vertical-align: middle; }
+body header nav div.wrapper section.menu ul#link-menu form { display: inline-flex; margin-left: 13px; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar { display: flex; align-items: center; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar input { width: 170px; height: 20px; padding: 0px 5px; border: none; border-bottom: 1px solid #fff; outline: none; background: none; color: #b2b2b2; cursor: text; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar input:focus { border-bottom-color: #ffb72e; color: #fff; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar input:focus + button { border-bottom-color: #ffb72e; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar input:focus + button i { color: #ffb72e; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar button { height: 20px; background-color: transparent; border: none; border-bottom: 1px solid #fff; outline: none; cursor: pointer; padding-right: 6px; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar button i { color: #fff; }
+body header nav div.wrapper section.menu ul#link-menu form section.search-bar button:focus > i { color: #03a9f4; }
+
+/*/////////////////////////
+///////////////////////////
+////                   ////
+////  STYLING:         ////
+////  <body>           ////
+////      <main>       ////
+////        ...        ////
+////      </main>      ////
+////  </body>          ////
+////                   ////
+///////////////////////////
+/////////////////////////*/
+
+/*//////////////////////////////////////////////////
+// For menu beams (+Responsive with slider point) //
+//////////////////////////////////////////////////*/
+body main div.beam-menu { position: relative; }
+body main div.beam-menu input.slider-point-1, 
+body main div.beam-menu input.slider-point-2, 
+body main div.beam-menu input.slider-point-3,
+body main div.beam-menu input.slider-point-4 { display: none; }
+body main div.beam-menu span { display: none; }
+body main div.beam-menu span section {  }
+body main div.beam-menu ul { list-style: none; }
+body main div.beam-menu ul li { text-align: center; float: left; }
+body main div.beam-menu ul li i { color: #fff; border-radius: 3px; background-color: #03a9f4; padding: 10px 13px; margin: 30px 0 20px 0; cursor: default; }
+body main div.beam-menu ul li h2 { font-size: 18px; color: #212121; margin-bottom: 9px; }
+body main div.beam-menu ul li h3 { font-size: 12px; color: #727272; width: 90%; margin: auto; }
+body main div.beam-menu ul li a { width: 30%; display: block; margin: 15px auto; font-weight: bold; font-size: 13px; color: #03a9f4; vertical-align: middle; transition: ease-in-out 0.1s; }
+body main div.beam-menu ul li a:after { content: '\f054'; margin-left: 5px; font-family: FontAwesome; color: #03a9f4; font-size: 16px; vertical-align: inherit; transition: ease-in-out 0.1s; }
+body main div.beam-menu ul li a:hover { text-decoration: none; color: #ff9800; }
+body main div.beam-menu ul li a:hover:after { color: #ff9800; }
+body main div.beam-menu ul li:first-child, body main div.beam-menu ul li:nth-child(3) { background-color: #f0fafe; }
+body main div.beam-menu ul li:nth-child(2), body main div.beam-menu ul li:last-child { background-color: #f7fcff; }
+/*//////////////////////////////////////////
+// For display the image of our portfolio //
+//////////////////////////////////////////*/
+body main div.our-portfolio { text-align: center; position: relative; background-color: #fff; overflow: auto; padding: 50px 0; }
+body main div.our-portfolio h1 { font-size: 27px; margin-bottom: 8px; }
+body main div.our-portfolio h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
+body main div.our-portfolio ul { list-style: none; margin: 20px 0; }
+body main div.our-portfolio ul li { display: inline-block; }
+body main div.our-portfolio ul li a { display: block; font-size: 13px; font-weight: bold; color: #03a9f4; padding: 0 20px 5px 20px; border-bottom: solid 2px; border-color: transparent;  }
+body main div.our-portfolio ul li a.active { text-decoration: none; color: #212121; border-color: #03a9f4; transition: all .5s; }
+body main div.our-portfolio ul li a:not(.active):hover { text-decoration: none; color: #ff9800; transition: all .2s; }
+body main div.our-portfolio section.portfolio-pictures { overflow: hidden; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images { float: left; width: 25%; height: 22vw; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images img { display: block; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-small { float: left; width: 50%; height: 50%; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-small img { width: 100%; height: 100%; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-wide { float: left; width: 100%; height: 50%; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-wide img { width: 100%; height: 100%; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-normal { width: 100%; height: 100%; }
+body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-normal img { width: 100%; height: 100%; }
+body main div.our-portfolio a.load-more { font-weight: bold; color: #03a9f4; display: block; margin-top: 30px; cursor: pointer; vertical-align: middle; text-decoration: none; transition: all ease .2s; }
+body main div.our-portfolio a.load-more:hover { color: #ff9800; }
+body main div.our-portfolio a.load-more i { font-size: 22px; margin-left: 10px; }
+/*//////////////////////
+// For offer business //
+//////////////////////*/
+body main div.get-started { position: relative; }
+body main div.get-started img { width: 100%; height: 50vh; display: block; object-fit: cover; object-position: center; }
+body main div.get-started section.container-get-started { display: block; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; }
+body main div.get-started section.container-get-started h3 { font-weight: normal; color: #ccc; width: 60%; margin: auto; margin-bottom: 15px; }
+body main div.get-started section.container-get-started section.container-button { display: inline-block; overflow: hidden; position: relative; border-radius: 3px; }
+body main div.get-started section.container-get-started section.container-button a.ripple-effect { color: #fff; font-size: 12px; font-weight: bold; outline: 0; border: 0; border-radius: 3px; display: inline-block; padding: 8px 27px; background-color: #03a9f4; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease; }
+body main div.get-started section.container-get-started section.container-button a.ripple-effect:hover { text-decoration: none; }
+body main div.get-started section.container-get-started section.container-button a.ripple-effect:active { background-color: #0381ba; }
+/*//////////////////////////////////////////////////////////////
+// For view the latest news from us (+Responsive with slider) //
+//////////////////////////////////////////////////////////////*/
+body main div.latest-news { text-align: center; position: relative; background-color: #fff; padding: 50px 0; }
+body main div.latest-news h1 { font-size: 27px; margin-bottom: 8px; }
+body main div.latest-news h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
+body main div.latest-news div.wrapper2 ul.beam-news { list-style: none; display: flex; justify-content: space-between; margin-top: 22px; }
+body main div.latest-news div.wrapper2 ul.beam-news li { width: 31.5%; }
+body main div.latest-news div.wrapper2 ul.beam-news li a:hover { text-decoration: none; }
+body main div.latest-news div.wrapper2 ul.beam-news li a:hover > p { color: #ff9800; }
+body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb { width: 100%; overflow: hidden; position: relative; }
+body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb:after { content: ""; display: none; height: 100%; width: 100%; position: absolute; top: 0; left: 0; background-color: rgba(52,73,94,0.75); }
+body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb img { z-index: -1; width: 100%; display: block; background-size: cover; background-repeat: no-repeat; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
+body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb span { z-index: 1; display: none; font-size: 35px; color: #ffffff; font-family: sans-serif; text-align: center; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; height: 50px; cursor: pointer; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
+body main div.latest-news div.wrapper2 ul.beam-news li a:hover section.box-news-thumb:after { display: block; }
+body main div.latest-news div.wrapper2 ul.beam-news li a:hover section.box-news-thumb img { -ms-transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+body main div.latest-news div.wrapper2 ul.beam-news li a:hover section.box-news-thumb span { display: block; }
+body main div.latest-news div.wrapper2 ul.beam-news li a h5 { font-weight: normal; font-size: 12px; color: #727272; margin: 20px 0 10px 0; }
+body main div.latest-news div.wrapper2 ul.beam-news li a p { text-decoration: none; font-weight: bold; font-size: 18px; color: #03a9f4; transition: all ease .2s; }
+/*/////////////////////////////////
+// For describe our team members //
+/////////////////////////////////*/
+body main div.our-team-member { text-align: center; position: relative; background-color: #f0fafe; padding: 50px 0; }
+body main div.our-team-member h1 { font-size: 27px; margin-bottom: 10px; }
+body main div.our-team-member h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
+body main div.our-team-member div.wrapper2 section.container-our-team-member { display: flex; justify-content: space-between; }
+body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member { width: 23%; margin-top: 22px; }
+body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member img { width: 100%; display: block; }
+body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member h2 { text-decoration: none; font-weight: bold; font-size: 15px; color: #212121; margin: 10px 0; }
+body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member h5 { font-weight: normal; font-size: 12px; color: #727272; }
+/*///////////////////////////////////////
+// For describe the skills that we can //
+///////////////////////////////////////*/
+body main div.our-skills { text-align: center; position: relative; background-color: #fff; padding: 50px 0; }
+body main div.our-skills h1 { font-size: 27px; margin-bottom: 10px; }
+body main div.our-skills h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
+body main div.our-skills div.wrapper2 section.progress-bar { margin-top: 22px; margin-bottom: 8px; }
+body main div.our-skills div.wrapper2 section.progress-bar ul { list-style: none; display: flex; justify-content: space-between; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li { width: 49%; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar { width: 100%; margin-bottom: 20px; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar:last-child { margin-bottom: 0; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar section.progress-text { display: flex; justify-content: space-between; margin: 0 0 5px 0; padding: 0; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar section.progress-text p { font-weight: 600; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress { display: block; width: 100%; height: 20px; background-color: #b3e5fc; color: #03a9f4; border: none; outline: none; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress::-moz-progress-bar { background-color: #03a9f4; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress::-webkit-progress-bar { background-color: #b3e5fc; }
+body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress::-webkit-progress-value { background-color: #03a9f4; }
+/*/////////////////////////////////////////////
+// For count the the activities we have done //
+/////////////////////////////////////////////*/
+body main div.counter-activity { background-color: #ff9800; display: flex; justify-content: center; align-items: center; padding: 50px 0; }
+body main div.counter-activity div.wrapper2 ul { list-style: none; position: relative; display: flex; justify-content: space-between; }
+body main div.counter-activity div.wrapper2 ul li { display: flex; align-items: center; color: #fff; }
+body main div.counter-activity div.wrapper2 ul li i { color: #ff9800; padding: 10px 13px; background-color: #fff; border-radius: 3px; }
+body main div.counter-activity div.wrapper2 ul li section.container-activity-text { margin-left: 20px; }
+body main div.counter-activity div.wrapper2 ul li section.container-activity-text h3 { font-size: 25px; letter-spacing: 2px; }
+body main div.counter-activity div.wrapper2 ul li section.container-activity-text h5 { font-size: 9px; letter-spacing: 1px; }
+/*////////////////////////////////////////////
+// For displaying quotations to be conveyed //
+////////////////////////////////////////////*/
+body main div.our-team-quotes { text-align: center; position: relative; background-color: #fff; padding: 50px 0; }
+body main div.our-team-quotes h1 { font-size: 27px; margin-bottom: 10px; }
+body main div.our-team-quotes h3 { font-size: 12px; color: #212121; width: 650px; margin: auto; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul { list-style: none; position: relative; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li { width: 33.33%; box-sizing: border-box; float: left; padding: 0 30px; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li i { margin: 30px 0; color: #03a9f4; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li h3 { font-size: 15px; font-weight: normal; width: 100%; margin-bottom: 25px; color: #212121; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section { display: flex; justify-content: center; align-items: center; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section img { width: 50px; height: 50px; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section div { text-align: left; margin-left: 13px; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section div h4 { font-size: 14px; color: #212121; letter-spacing: 1px; }
+body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section div h5 { font-size: 12px; color: #727272; }
+/*//////////////////////////////////////////////////
+// For show the customers who have joined with us //
+//////////////////////////////////////////////////*/
+body main div.web-customer { position: relative; }
+body main div.web-customer img.web-customer-background { width: 100%; display: block; }
+body main div.web-customer section.container-web-customer { display: block; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; }
+body main div.web-customer section.container-web-customer h1 { font-size: 27px; color: #fff; margin-bottom: 10px; }
+body main div.web-customer section.container-web-customer h3 { font-size: 12px; color: #c2c2c2; margin: auto; font-weight: normal; width: 650px; margin-bottom: 35px; }
+body main div.web-customer section.container-web-customer section { display: flex; justify-content: center; align-items: center; }
+body main div.web-customer section.container-web-customer ul { list-style: none; position: relative; }
+body main div.web-customer section.container-web-customer ul li { float: left; margin: 0 26px; }
+body main div.web-customer section.container-web-customer ul li a { text-decoration: none; }
+body main div.web-customer section.container-web-customer ul li a img { width: 75%; display: block; }
+/*/////////////////////////////////////////
+// For display the latest tweet from our //
+/////////////////////////////////////////*/
+body main div.web-tweet { background-color: #212121; display: flex; justify-content: center; align-items: center; padding: 50px 0; }
+body main div.web-tweet div.wrapper2 ul { list-style: none; display: flex; justify-content: space-between; }
+body main div.web-tweet div.wrapper2 ul li { width: 31.5%; }
+body main div.web-tweet div.wrapper2 ul li:first-child i { color: #fff; padding: 10px 10px; border-radius: 3px; background-color: #03a9f4; display: block; float: left; margin-right: 5px; transition: all ease .5s; margin-top: 20px; }
+body main div.web-tweet div.wrapper2 ul li:first-child i:hover { background-color: #ff9800; }
+body main div.web-tweet div.wrapper2 ul li h2 { font-size: 14px; color: #fff; margin-bottom: 13px; }
+body main div.web-tweet div.wrapper2 ul li h2 a { font-size: 14px; color: #b3e5fc; transition: all ease .5s; text-decoration: none; }
+body main div.web-tweet div.wrapper2 ul li h2 a:hover { color: #0079b1; }
+body main div.web-tweet div.wrapper2 ul li h4, .web-tweet ul li a, .web-tweet ul li section a h5 { font-weight: normal; font-size: 13px; text-align: justify; color: #fff; line-height: 25px; }
+body main div.web-tweet div.wrapper2 ul li:nth-child(2) a { margin-bottom: 15px; text-decoration: none; display: block; transition: all ease .5s; }
+body main div.web-tweet div.wrapper2 ul li:nth-child(2) a:hover > span { color: #ff9800; transition: all ease .5s; }
+body main div.web-tweet div.wrapper2 ul li:nth-child(2) a:after { content: " 5 minutes ago"; color: #727272; }
+body main div.web-tweet div.wrapper2 ul li:nth-child(2) a span { color: #03a9f4; }
+body main div.web-tweet div.wrapper2 ul li:nth-child(2) a span i { margin-right: 3px; }
+body main div.web-tweet div.wrapper2 ul li .web-tweet-post a { display: flex; align-items: center; text-decoration: none; }
+body main div.web-tweet div.wrapper2 ul li .web-tweet-post a:hover > h5 { color: #ff9800; transition: all ease .5s; }
+body main div.web-tweet div.wrapper2 ul li .web-tweet-post a h5 { color: #03a9f4; margin-left: 20px; }
+body main div.web-tweet div.wrapper2 ul li .web-tweet-post { margin-bottom: 20px; }
+/*//////////////////////////////////////////
+// For display the location where we were //
+//////////////////////////////////////////*/
+body main div#google-maps { width: 100%; height: 330px; }
+
+/*/////////////////////////
+///////////////////////////
+////                   ////
+////  STYLING:         ////
+////  <body>           ////
+////      <footer>     ////
+////         ...       ////
+////      </footer>    ////
+////  </body>          ////
+////                   ////
+///////////////////////////
+/////////////////////////*/
+
+/*//////////////////////////////////////////
+// For display the final menu of our site //
+//////////////////////////////////////////*/
+body footer { background-color: #212121; }
+body footer div.wrapper3 { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; }
+body footer div.wrapper3 h5 { color: #fff; font-weight: normal; }
+body footer div.wrapper3 section.menu {  }
+body footer div.wrapper3 section.menu ul#link-menu { list-style: none; }
+body footer div.wrapper3 section.menu ul#link-menu li { float: left; }
+body footer div.wrapper3 section.menu ul#link-menu li a { font-size: 12px; font-weight: 600; padding: 3px 15px; color: #fff; border-top: solid 2px; border-color: transparent; transition: ease-in-out 0.33s; }
+body footer div.wrapper3 section.menu ul#link-menu li a:hover { text-decoration: none; }
+body footer div.wrapper3 section.menu ul#link-menu li a.active { border-color: transparent; color: #03a9f4; text-decoration: none; }
+body footer div.wrapper3 section.menu ul#link-menu li a:not(.active):hover { border-color: transparent; color: #ffb72e; text-decoration: none; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown a.dropdown-toggle.active { border-top-width: 4px; border-top-color: #03a9f4; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu { transform: rotate(180deg); list-style: none; display: none; position: absolute; bottom: 113%; right: 0; width: 100%; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu.active { display: block; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li { transform: rotate(-180deg); margin: 0; padding: 0; width: 100%; height: 100%; float: none; background-color: #f8f8f8; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li:last-of-type { border: 0; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a { margin: 0; display: block; color: #777777; padding: 10px 0; text-align: center; border: 0; outline: 0; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active { background-color: #03a9f4; color: #eee; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown a.dropdown-toggle.active {}
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu { list-style: none; display: none; position: absolute; bottom: 0; right: 100%; width: 100%; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu.active { display: block; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li { margin: 0; padding: 0; width: 100%; height: 100%; float: none; background-color: #f8f8f8; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li:last-of-type { border: 0; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a { margin: 0; display: block; color: #777777; padding: 10px 0; text-align: center; border: 0; outline: 0; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active { background-color: #03a9f4; color: #eee; }
+body footer div.wrapper3 section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+body footer nav.shrink {}
+body footer nav.shrink div.wrapper {}
+body footer nav.shrink div.wrapper section.menu ul#link-menu li a.active {}
+body footer nav.shrink div.wrapper section.menu ul#link-menu li a:not(.active):hover {}
+body footer nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a, body footer nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a {}
+body footer nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active, body footer nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active {}
+.button-dropdown {}
+.dropdown-toggle:before {}
+.dropdown-toggle.active:before {}
+body footer div.wrapper3 section.menu ul#link-menu form {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar input {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar input:focus {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar input:focus + button {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar input:focus + button i {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar button {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar button i {}
+body footer div.wrapper3 section.menu ul#link-menu form section.search-bar button:focus > i {}
+
+/*=======
+|| END ||
+=======*/
+
+/*/////////////////////////////////////////////
+// RESPONSIVE: 360-760px WIDTH OF RESOLUTION //
+/////////////////////////////////////////////*/
+@media screen and (min-width: 360px) and (max-width: 760px) {
+
+	body header {  }
+	body header div#header-slideshow {  }
+	body header div#header-slideshow img {  }
+	body header div#header-slideshow section.header-desc {  }
+	body header div#header-slideshow section.header-desc h2 { font-size: 15px; width: 90%; margin: auto; }
+	body header div#header-slideshow section.header-desc h2 span {  }
+	body header div#header-slideshow section.header-desc h1 { font-size: 20px; width: 95%; margin: auto; }
+	body header div#header-slideshow section.header-desc h3 { font-size: 13px; width: 90%; margin: auto; }
+	body header div#header-slideshow section.header-desc section.container-button { margin-top: 15px; }
+	body header div#header-slideshow section.header-desc section.container-button a.ripple-effect {  }
+	body header div#header-slideshow section.header-desc section.container-button a.ripple-effect:hover {  }
+	body header div#header-slideshow section.header-desc section.container-button a.ripple-effect:active {  }
+	body header nav {  }
+	body header nav div.wrapper { position: relative; width: 80%; padding: 35px 0; transition: all ease .5s; } /* New Code */
+	body header nav div.wrapper section.menu {  }
+	body header nav div.wrapper section.menu section#menu-button { display: block; z-index: 999; /* position: absolute; right: 0; */ cursor: pointer; }
+	body header nav div.wrapper section.menu ul#link-menu:before { content: " "; position: absolute; right: 2px; top: -14px; width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #444 transparent; } /* New Code */
+	body header nav div.wrapper section.menu ul#link-menu { }
+	body header nav div.wrapper section.menu ul#link-menu,
+	body header nav div.wrapper section.menu:active ul#link-menu { display: none; position: absolute; background: #f8f8f8; border: solid 6px #444; /*border-radius: 12px;*/ right: 0; top: 83px; transition: all ease .5s; } /* New Code */
+	body header nav div.wrapper section.menu ul#link-menu li { display: block; text-align: center; width: 100%; margin: 0; padding: 0; }
+	body header nav div.wrapper section.menu ul#link-menu li:last-of-type { border-right: 0; } /* New Code */
+	body header nav div.wrapper section.menu ul#link-menu li:last-child { border-bottom: none; } /* New Code */
+	body header nav div.wrapper section.menu ul#link-menu li a { display: block; color: #777777; margin: 0; padding: 10px 30px; border-color: transparent; border: 0; cursor: pointer; }
+	body header nav div.wrapper section.menu ul#link-menu li a.active { background-color: #03a9f4; color: #fff; border-color: transparent; border: 0; }
+	body header nav div.wrapper section.menu ul#link-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+	/*
+	body header nav div.wrapper section.menu ul#link-menu li:first-child a { border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; } /New Code/
+	body header nav div.wrapper section.menu ul#link-menu li:last-child a { border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; } /New Code/
+	*/
+	body header nav div.wrapper section.menu ul#link-menu li:last-of-type a { margin-right: 0; } /* New Code */
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown a.dropdown-toggle.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu { position: static; }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li:last-of-type {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown a.dropdown-toggle.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu { position: static; }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li:last-of-type {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover { background-color: #bbb; border-color: transparent; }
+	body header nav.shrink {  }
+	body header nav.shrink div.wrapper { width: 90%; padding: 15px 0; transition: all ease .5s; }
+	body header nav.shrink div.wrapper section.menu ul#link-menu { top: 64px; } /* New Code */
+	body header nav.shrink div.wrapper section.menu ul#link-menu li a.active { color: #fff; }
+	body header nav.shrink div.wrapper section.menu ul#link-menu li a:not(.active):hover { color: #777777; }
+	body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a, body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a {  }
+	body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active, body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active {  }
+	.button-dropdown {  }
+	.dropdown-toggle:before {  }
+	.dropdown-toggle.active:before {  }
+	body header nav div.wrapper section.menu ul#link-menu form { border-top: solid 2px #444; /* border-bottom: solid 2px #444; */ padding: 10px; margin-left: 0; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar { justify-content: center; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar input { background-color: #fff; border: solid 1px #bbb; width: 75%; height: 30px; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar input:focus { border-bottom-color: #bbb; color: #000; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar input:focus + button { border-bottom-color: #bbb; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar input:focus + button i { color: #ffb72e; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar button { background-color: #444; width: 17%; height: 32px; border: solid 1px #bbb; border-left: none; padding: 0; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar button i { color: #ccc; }
+	body header nav div.wrapper section.menu ul#link-menu form section.search-bar button:focus > i { color: #03a9f4; }
+
+	body main div.beam-menu { height: auto; }
+	body main div.beam-menu input.slider-point-1, 
+	body main div.beam-menu input.slider-point-2, 
+	body main div.beam-menu input.slider-point-3,
+	body main div.beam-menu input.slider-point-4 { display: inline-block; bottom: 0; }
+	body main div.beam-menu input.slider-point-1,
+	body main div.beam-menu input.slider-point-1 + span { left: 39.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; } /* New Code */
+	body main div.beam-menu input.slider-point-2,
+	body main div.beam-menu input.slider-point-2 + span { left: 46.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; } /* New Code */
+	body main div.beam-menu input.slider-point-3,
+	body main div.beam-menu input.slider-point-3 + span { left: 53.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; } /* New Code */
+	body main div.beam-menu input.slider-point-4,
+	body main div.beam-menu input.slider-point-4 + span { left: 60.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; } /* New Code */
+	body main div.beam-menu input.slider-point-1:checked + span { border-color: #2670ad; } /* New Code */
+	body main div.beam-menu input.slider-point-1:checked + span section { width: 80%; height: 80%; opacity: 1; }/* New Code */
+	body main div.beam-menu input.slider-point-1:checked ~ ul > li:first-child { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; } /* New Code */
+	body main div.beam-menu input.slider-point-2:checked + span { border-color: #2670ad; } /* New Code */
+	body main div.beam-menu input.slider-point-2:checked + span section { width: 80%; height: 80%; opacity: 1; } /* New Code */
+	body main div.beam-menu input.slider-point-2:checked ~ ul > li:nth-child(2) { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; } /* New Code */
+	body main div.beam-menu input.slider-point-3:checked + span { border-color: #2670ad; } /* New Code */
+	body main div.beam-menu input.slider-point-3:checked + span section { width: 80%; height: 80%; opacity: 1; } /* New Code */
+	body main div.beam-menu input.slider-point-3:checked ~ ul > li:nth-child(3) { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; } /* New Code */
+	body main div.beam-menu input.slider-point-4:checked + span { border-color: #2670ad; } /* New Code */
+	body main div.beam-menu input.slider-point-4:checked + span section { width: 80%; height: 80%; opacity: 1; } /* New Code */
+	body main div.beam-menu input.slider-point-4:checked ~ ul > li:nth-child(4) { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; } /* New Code */
+	body main div.beam-menu span { display: inline-block; background-color: #ccc; text-indent: 100px; -webit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; z-index: 2; }
+	body main div.beam-menu span section { padding: 0; margin: 0; opacity: 0; background-color: #2670ad; width: 0; height: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); transition: all ease .4s; border-radius: 50%; }
+	body main div.beam-menu input[type="radio"] { z-index: 3; opacity: 0; } /* New Code */
+	body main div.beam-menu input[type="radio"]:hover { cursor: pointer; } /* New Code */
+	body main div.beam-menu input[type="radio"],
+	body main div.beam-menu span { width: 20px; height: 20px; overflow: hidden; } /* New Code */
+	body main div.beam-menu ul { background-color: #f0fafe; }
+	body main div.beam-menu ul li { padding-bottom: 50px; float: none; position: absolute; visibility: hidden; opacity: 0; width: 100%; overflow: hidden; }
+	body main div.beam-menu ul li i {  }
+	body main div.beam-menu ul li h2 {  }
+	body main div.beam-menu ul li h3 {  }
+	body main div.beam-menu ul li a {  }
+	body main div.beam-menu ul li a:after {  }
+	body main div.beam-menu ul li a:hover {  }
+	body main div.beam-menu ul li a:hover:after {  }
+	body main div.beam-menu ul li:first-child, body main div.beam-menu ul li:nth-child(3) {  }
+	body main div.beam-menu ul li:nth-child(2), body main div.beam-menu ul li:last-child {  }
+	
+	body main div.our-portfolio { padding: 23px 0; }
+	body main div.our-portfolio h1 {  }
+	body main div.our-portfolio h3 { width: 85%; }
+	body main div.our-portfolio ul {  }
+	body main div.our-portfolio ul li {  }
+	body main div.our-portfolio ul li a {  }
+	body main div.our-portfolio ul li a.active { border-color: transparent; }
+	body main div.our-portfolio ul li a:not(.active):hover {  }
+	body main div.our-portfolio section.portfolio-pictures {  }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images { width: 50%; height: 40vw; }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images img { max-width: 100%; max-height: 100%; }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-small {  }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-small img {  }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-wide {  }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-wide img {  }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-normal {  }
+	body main div.our-portfolio section.portfolio-pictures section.container-portfolio-images section.portfolio-normal img {  }
+	body main div.our-portfolio a.load-more {  }
+	body main div.our-portfolio a.load-more:hover {  }
+	body main div.our-portfolio a.load-more i {  }
+	
+	body main div.get-started {  }
+	body main div.get-started img {  }
+	body main div.get-started section.container-get-started {  }
+	body main div.get-started section.container-get-started h3 { font-size: 15px; }
+	body main div.get-started section.container-get-started section.container-button {  }
+	body main div.get-started section.container-get-started section.container-button a.ripple-effect {  }
+	body main div.get-started section.container-get-started section.container-button a.ripple-effect:hover {  }
+	body main div.get-started section.container-get-started section.container-button a.ripple-effect:active {  }
+	
+	body main div.latest-news { padding: 23px 0; }
+	body main div.latest-news h1 {  }
+	body main div.latest-news h3 { width: 85%; }
+	body main div.latest-news div.wrapper2 ul.beam-news { display: block; }
+	body main div.latest-news div.wrapper2 ul.beam-news li { width: 75%; margin: auto; }
+	body main div.latest-news div.wrapper2 ul.beam-news li:last-child { padding-bottom: 0; } /* New Code */
+	body main div.latest-news div.wrapper2 ul.beam-news li a:hover {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a:hover > p {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb:after {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb img {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a section.box-news-thumb span {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a:hover section.box-news-thumb:after {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a:hover section.box-news-thumb img {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a:hover section.box-news-thumb span {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a h5 {  }
+	body main div.latest-news div.wrapper2 ul.beam-news li a p {  }
+	
+	body main div.our-team-member { padding: 23px 0; }
+	body main div.our-team-member h1 {  }
+	body main div.our-team-member h3 { width: 85%; }
+	body main div.our-team-member div.wrapper2 section.container-our-team-member {  }
+	body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member {  }
+	body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member img {  }
+	body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member h2 {  }
+	body main div.our-team-member div.wrapper2 section.container-our-team-member section.styling-our-team-member h5 {  }
+	
+	body main div.our-skills { padding: 23px 0; }
+	body main div.our-skills h1 {  }
+	body main div.our-skills h3 { width: 85%; }
+	body main div.our-skills div.wrapper2 section.progress-bar {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul { display: block; }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li { width: 100%; }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li:first-child { width: 100%; margin-bottom: 20px; } /* New Code */
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar:last-child {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar section.progress-text {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar section.progress-text p {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress::-moz-progress-bar {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress::-webkit-progress-bar {  }
+	body main div.our-skills div.wrapper2 section.progress-bar ul li section.container-progbar progress::-webkit-progress-value {  }
+	
+	body main div.counter-activity {  }
+	body main div.counter-activity div.wrapper2 ul { display: block; }
+	body main div.counter-activity div.wrapper2 ul li { display: block; float: left; text-align: center; width: 50%; padding: 20px 0; }
+	body main div.counter-activity div.wrapper2 ul li i { margin: auto; font-size: 40px; }
+	body main div.counter-activity div.wrapper2 ul li section.container-activity-text { margin-left: 0; }
+	body main div.counter-activity div.wrapper2 ul li section.container-activity-text h3 {  }
+	body main div.counter-activity div.wrapper2 ul li section.container-activity-text h5 {  }
+	
+	body main div.our-team-quotes { padding: 23px 0; }
+	body main div.our-team-quotes h1 {  }
+	body main div.our-team-quotes h3 { width: 85%; }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li { float: none; width: 100%; padding-bottom: 20px; }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li i {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li h3 {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section img {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section div {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section div h4 {  }
+	body main div.our-team-quotes div.wrapper2 section.container-our-team-quotes ul li section div h5 {  }
+	
+	body main div.web-customer {  }
+	body main div.web-customer img.web-customer-background { height: 65vh; display: block; object-fit: cover; object-position: center; }
+	body main div.web-customer section.container-web-customer {  }
+	body main div.web-customer section.container-web-customer h1 {  }
+	body main div.web-customer section.container-web-customer h3 { width: 80%; margin-bottom: 20px; }
+	body main div.web-customer section.container-web-customer section {  }
+	body main div.web-customer section.container-web-customer ul {  }
+	body main div.web-customer section.container-web-customer ul li { width: 33.33%; height: 10vh; margin: 0; display: flex; align-items: center; justify-content: center; }
+	body main div.web-customer section.container-web-customer ul li:nth-child(4) { width: 50%; margin: 30px 0 0 0; } /* New Code */
+	body main div.web-customer section.container-web-customer ul li:last-child { width: 50%; margin: 30px 0 0 0; } /* New Code */
+	body main div.web-customer section.container-web-customer ul li a { display: block; width: 100%; }
+	body main div.web-customer section.container-web-customer ul li a img { width: 50%; margin: auto; }
+	
+	body main div.web-tweet {  }
+	body main div.web-tweet div.wrapper2 ul { display: block; }
+	body main div.web-tweet div.wrapper2 ul li { width: 100%; overflow: hidden; margin-bottom: 20px; box-sizing: border-box; padding: 5%; }
+	body main div.web-tweet div.wrapper2 ul li:last-child { margin-bottom: 0; } /* New Code */
+	body main div.web-tweet div.wrapper2 ul li:first-child i {  }
+	body main div.web-tweet div.wrapper2 ul li:first-child i:hover {  }
+	body main div.web-tweet div.wrapper2 ul li h2 {  }
+	body main div.web-tweet div.wrapper2 ul li h2:before { content: '\f0da'; font-size: 18px; font-family: FontAwesome; margin-right: 10px; vertical-align: baseline; } /* New Code */
+	body main div.web-tweet div.wrapper2 ul li h2 a {  }
+	body main div.web-tweet div.wrapper2 ul li h2 a:hover {  }
+	body main div.web-tweet div.wrapper2 ul li h4, .web-tweet ul li a, .web-tweet ul li section a h5 {  }
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) { border-top: solid 1px #fff; border-bottom: solid 1px #fff; } /* New Code */
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) a {  }
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) a:last-of-type { margin-bottom: 0; } /* New Code */
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) a:hover > span {  }
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) a:after {  }
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) a span {  }
+	body main div.web-tweet div.wrapper2 ul li:nth-child(2) a span i {  }
+	body main div.web-tweet div.wrapper2 ul li .web-tweet-post a {  }
+	body main div.web-tweet div.wrapper2 ul li .web-tweet-post a:hover > h5 {  }
+	body main div.web-tweet div.wrapper2 ul li .web-tweet-post a h5 {  }
+	body main div.web-tweet div.wrapper2 ul li .web-tweet-post {  }
+	body main div.web-tweet div.wrapper2 ul li .web-tweet-post:last-of-type { margin-bottom: 0; } /* New Code */
+	
+	body main div#google-maps {  }
+
+/*
+	body header nav {  }
+	body header nav div.wrapper { position: relative; width: 80%; padding: 35px 0; transition: all ease .5s; } // New Code
+	body header nav div.wrapper section.menu {  }
+	body header nav div.wrapper section.menu section#menu-button { display: block; z-index: 999; /position: absolute; right: 0;/ cursor: pointer; }
+	body header nav div.wrapper section.menu ul#link-menu:before { content: ""; position: absolute; right: 2px; top: -14px; width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #444 transparent; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu {  }
+	body header nav div.wrapper section.menu ul#link-menu,
+	body header nav div.wrapper section.menu:active ul#link-menu { display: none; position: absolute; background: #f8f8f8; border: solid 6px #444; border-radius: 12px; right: 0; top: 83px; transition: all ease .5s; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu li { display: block; text-align: center; width: 100%; margin: 0; padding: 0; }
+	body header nav div.wrapper section.menu ul#link-menu li:last-of-type { border-right: 0; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu li:last-child { border-bottom: none; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu li a { display: block; color: #777777;  margin: 0; padding: 10px 30px; border-color: transparent; border: 0; cursor: pointer; }
+	body header nav div.wrapper section.menu ul#link-menu li a.active { background-color: #03a9f4; color: #fff; border-color: transparent; border: 0; }
+	body header nav div.wrapper section.menu ul#link-menu li a:not(.active):hover {  }
+	body header nav div.wrapper section.menu ul#link-menu li:first-child a { border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu li:last-child a { border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu li:last-of-type a { margin-right: 0; } // New Code
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown a.dropdown-toggle.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li:last-of-type {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown a.dropdown-toggle.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li:last-of-type {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a.active {  }
+	body header nav div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a:not(.active):hover {  }
+	body header nav.shrink {  }
+	body header nav.shrink div.wrapper { width: 90%; padding: 15px 0; transition: all ease .5s; }
+	body header nav.shrink div.wrapper section.menu ul#link-menu { top: 64px; } // New Code
+	body header nav.shrink div.wrapper section.menu ul#link-menu li a.active { color: #fff; }
+	body header nav.shrink div.wrapper section.menu ul#link-menu li a:not(.active):hover {  }
+	body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li a, body header nav.shrink div.wrapper section.menu ul#link-menu li.button-dropdown ul.dropdown-menu li.button-dropdown ul.dropdown-menu li a {  }
+*/
+
+	body footer {  }
+	body footer div.wrapper3 { display: block; text-align: center;  }
+	body footer div.wrapper3 h5 { padding-bottom: 20px; }
+	body footer div.wrapper3 section.menu {  }
+	body footer div.wrapper3 section.menu section#menu-button {  }
+	body footer div.wrapper3 section.menu ul#link-menu {  }
+	body footer div.wrapper3 section.menu ul#link-menu li { float: none; display: inline-block; }
+	body footer div.wrapper3 section.menu ul#link-menu li a { padding: 5px 15px; }
+	body footer div.wrapper3 section.menu ul#link-menu li a:not(.active):hover {  }
+	body footer div.wrapper3 section.menu ul#link-menu li a:hover {  }
+	body footer div.wrapper3 section.menu ul#link-menu li ul.dropdown-menu {  }
+	body footer div.wrapper3 section.menu ul#link-menu li ul.dropdown-menu li a  {  }
+	body footer div.wrapper3 section.menu ul#link-menu li ul.dropdown-menu li ul.dropdown-menu {  }
+
+/*
+	#menu-button { display: block; z-index:999; /position: absolute; right: 0; cursor: pointer;\}
+	/nav form {display: flex; width: 100%; vertical-align: center; align-items: center}/
+	nav div.wrapper { width: 80%; padding: 35px 0; transition: all ease .5s; }
+	nav.shrink div.wrapper { width: 90%; padding: 15px 0; transition: all ease .5s; }
+	.wrapper { position: relative; }
+	nav .menu ul, .menu:active ul { display: none; position: absolute; background: #f8f8f8; border: solid 6px #444; border-radius: 12px; right: 0; top: 83px; transition: all ease .5s; }
+	nav.shrink .menu ul { top: 64px; }
+	.menu #link-menu:before { content:""; position: absolute; right: 2px; top: -14px; width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #444 transparent; }
+	.menu #link-menu li { display: block; text-align: center; width: 100%; margin: 0; padding: 0; }
+	.menu #link-menu li:last-of-type { border-right: 0; }
+	.menu #link-menu li:last-child { border-bottom: none; }
+	
+	.menu #link-menu li:first-child a { border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+	.menu #link-menu li:last-child a { border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+	.menu #link-menu li:last-of-type a { margin-right: 0; }
+	
+	.menu #link-menu li a { display: block; color: #777777;  margin: 0; padding: 10px 30px; border-color: transparent; border: 0; cursor: pointer; }
+	.menu #link-menu li a.active { background-color: #03a9f4; color: #fff; border-color: transparent; border: 0; }
+	.menu #link-menu form { border-top: solid 2px #444; /border-bottom: solid 2px #444;/ padding: 10px; margin-left: 0; }
+	.menu #link-menu form .search-bar { justify-content: center; }
+	.menu #link-menu form .search-bar input { background-color: #fff; border: solid 1px #bbb; width: 75%; height: 30px;  }
+	.menu #link-menu form .search-bar button { background-color: #444; width: 17%; height: 32px; border: solid 1px #bbb; border-left: none; padding: 0;  }
+	.menu #link-menu form .search-bar button:focus > i { color: #03a9f4; }
+	.menu #link-menu form .search-bar button i { color: #ccc;  }
+	.menu #link-menu form .search-bar input:focus { border-bottom-color: #bbb; color: #000; }
+	.menu #link-menu form .search-bar input:focus + button i { color: #ffb72e; }
+	.menu #link-menu form .search-bar input:focus + button { border-bottom-color: #bbb; }
+
+-	nav.shrink ul li a.active { color: #fff; }
+-	.button-search i { font-size: 22px; }
+	.container-button { margin-top: 15px; }
+-	.button-search { padding: 0; }
+-	.button-search:hover > i { color: #fff; }
+
+	.header-desc h2 { font-size: 15px; width: 90%; margin: auto; }
+	.header-desc h1 { font-size: 20px; width: 95%; margin: auto; }
+	.header-desc h3 { font-size: 13px; width: 90%; margin: auto; }
+
+	.slider-point-1, .slider-point-2, .slider-point-3, .slider-point-4, .slider-point-5 { display: inline-block; bottom: 0; }
+	
+	/ MAIN STYLING /
+	.beam-menu { height: auto; }
+	.beam-menu ul { background-color: #f0fafe; }
+	.beam-menu ul li { padding-bottom: 50px; float: none; position: absolute; visibility: hidden; opacity: 0; width: 100%; overflow: hidden; }
+	.beam-menu input[type="radio"], .beam-menu span { width: 20px; height: 20px; overflow: hidden; }
+	.beam-menu input[type="radio"] { z-index: 3; opacity: 0; }
+	.beam-menu input[type="radio"]:hover { cursor: pointer; }
+	.beam-menu span { display: inline-block; background-color: #ccc; text-indent: 100px; -webit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; z-index: 2; }
+	.beam-menu span section { padding: 0; margin: 0; opacity: 0; background-color: #2670ad; width: 0; height: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); transition: all ease .4s; border-radius: 50%; }
+	.slider-point-1, .slider-point-1 + span { left: 39.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; }
+	.slider-point-2, .slider-point-2 + span { left: 46.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; }
+	.slider-point-3, .slider-point-3 + span { left: 53.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; }
+	.slider-point-4, .slider-point-4 + span { left: 60.5%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; bottom: 4%; border: solid 2px #ccc; background: transparent; transition: all ease .5s; }
+	.slider-point-1:checked + span { border-color: #2670ad; }
+	.slider-point-1:checked + span section { width: 80%; height: 80%; opacity: 1; }
+	.slider-point-1:checked ~ ul > li:first-child { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; }
+	.slider-point-2:checked + span { border-color: #2670ad; }
+	.slider-point-2:checked + span section { width: 80%; height: 80%; opacity: 1; }
+	.slider-point-2:checked ~ ul > li:nth-child(2) { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; }
+	.slider-point-3:checked + span { border-color: #2670ad; }
+	.slider-point-3:checked + span section { width: 80%; height: 80%; opacity: 1; }
+	.slider-point-3:checked ~ ul > li:nth-child(3) { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; }
+	.slider-point-4:checked + span { border-color: #2670ad; }
+	.slider-point-4:checked + span section { width: 80%; height: 80%; opacity: 1; }
+	.slider-point-4:checked ~ ul > li:nth-child(4) { position: relative; visibility: visible; opacity: 1; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; }
+
+	.our-portfolio { padding: 23px 0; }
+	.our-portfolio h1 {  }
+	.our-portfolio h3 { width: 85%; }
+	.our-portfolio ul {  }
+	.our-portfolio ul li {  }
+	.our-portfolio ul li a {  }
+	.our-portfolio ul li a.active {  }
+	.our-portfolio ul li a:not(.active):hover {  }
+	.portfolio-pictures {  }
+	.container-portfolio-images { width: 50%; height: 40vw; }
+	.container-portfolio-images img { max-width: 100%; max-height: 100%; }
+	.portfolio-small {  }
+	.portfolio-small img {  }
+	.portfolio-wide {  }
+	.portfolio-wide img {  }
+	.portfolio-normal {  }
+	.portfolio-normal img {  }
+	.our-portfolio .load-more {  }
+	.our-portfolio .load-more:hover {  }
+	.our-portfolio .load-more i {  }
+
+	.get-started {  }
+	.get-started img {  }
+	.container-get-started {  }
+	.container-get-started section.container-button { margin-top: 0; }
+	.get-started h3 { font-size: 15px; }
+	.get-started a {  }
+	.get-started a:hover { }
+	.get-started a:active {  }
+
+	.latest-news { padding: 23px 0; }
+	.latest-news h1 {  }
+	.latest-news h3 { width: 85%; }
+	.beam-news { display: block; }
+	.beam-news li { width: 75%; margin: auto;  }
+	.beam-news li:last-child { padding-bottom: 0;  }
+	.beam-news li a:hover {  }
+	.beam-news li a:hover > p {  }
+	.beam-news li a section.box-news-thumb {  }
+	.beam-news li a section.box-news-thumb img {  }
+	.beam-news li a section.box-news-thumb span {  }
+	.beam-news li a:hover section.box-news-thumb img {  }
+	.beam-news li a:hover > .box-news-thumb:after {  }
+	.beam-news li a:hover > .box-news-thumb span {  }
+	.beam-news li a section.box-news-thumb:after {  }
+	.beam-news li a h5 {  }
+	.beam-news li a p {  }
+
+	.our-team-member { padding: 23px 0; }
+	.our-team-member h1 {  }
+	.our-team-member h3 { width: 85%; }
+	.container-our-team-member {  }
+	.styling-our-team-member {  }
+	.styling-our-team-member img {  }
+	.styling-our-team-member h2 {  }
+	.styling-our-team-member h5 {  }
+
+	.our-skills { padding: 23px 0; }
+	.our-skills h1 {  }
+	.our-skills h3 { width: 85%; }
+	.progress-bar ul { display: block; }
+	.progress-bar ul li { width: 100%; }
+	.progress-bar ul li:first-child { width: 100%; margin-bottom: 20px; }
+	.container-progbar {  }
+	.container-progbar:last-child {  }
+	.progress-text {  }
+	.progress-text p {  }
+	.container-progbar progress {  }
+	.container-progbar progress::-moz-progress-bar {  }
+	.container-progbar progress::-webkit-progress-bar {  }
+	.container-progbar progress::-webkit-progress-value {  }
+
+	.counter-activity {  }
+	.counter-activity ul { display: block; }
+	.counter-activity ul li { display: block; float: left; text-align: center; width: 50%; padding: 20px 0; }
+	.counter-activity ul li i { margin: auto; font-size: 40px; }
+	.container-activity-text { margin-left: 0; }
+	.container-activity-text h3 {  }
+	.container-activity-text h5 {  }
+
+	.our-team-quotes { padding: 23px 0; }
+	.our-team-quotes h1 {  }
+	.our-team-quotes h3 { width: 85%; }
+	.container-our-team-quotes ul {  }
+	.container-our-team-quotes ul li { float: none; width: 100%; padding-bottom: 20px; }
+	.container-our-team-quotes ul li i {  }
+	.container-our-team-quotes ul li h3 {  }
+	.container-our-team-quotes ul li section {  }
+	.container-our-team-quotes ul li section img {  }
+	.container-our-team-quotes ul li section div {  }
+	.container-our-team-quotes ul li section div h4 {  }
+	.container-our-team-quotes ul li section div h5 {  }
+
+	.web-customer {  }
+	.web-customer img.web-customer-background { height: 65vh; display: block; object-fit: cover; object-position: center; }
+	.container-web-customer {  }
+	.container-web-customer h1 {  }
+	.container-web-customer h3 { width: 80%; margin-bottom: 20px; }
+	.container-web-customer section {  }
+	.container-web-customer ul {  }
+	.container-web-customer ul li {  width: 33.33%; height: 10vh; margin: 0; display: flex; align-items: center; justify-content: center; }
+	.container-web-customer ul li:nth-child(4) { width: 50%; margin: 30px 0 0 0; }
+	.container-web-customer ul li:last-child { width: 50%; margin: 30px 0 0 0; }
+	.container-web-customer ul li a { display: block; width: 100%; }
+	.container-web-customer ul li a img { width: 50%; }
+
+	.web-tweet {  }
+	.web-tweet ul { display: block; }
+	.web-tweet ul li { width: 100%; overflow: hidden; margin-bottom: 20px; box-sizing: border-box; padding: 5%; }
+	.web-tweet ul li:last-child { margin-bottom: 0; }
+	.web-tweet ul li:first-child i {  }
+	.web-tweet ul li:first-child i:hover {  }
+	.web-tweet ul li h2 {  }
+	.web-tweet ul li h2:before { content: '\f0da'; font-size: 18px; font-family: FontAwesome; margin-right: 10px; vertical-align: baseline; }
+	.web-tweet ul li h2 a {  }
+	.web-tweet ul li h2 a:hover {  }
+	.web-tweet ul li h4, .web-tweet ul li a, .web-tweet ul li section a h5 {  }
+	.web-tweet ul li:nth-child(2) { border-top: solid 1px #fff; border-bottom: solid 1px #fff; }
+	.web-tweet ul li:nth-child(2) a {  }
+	.web-tweet ul li:nth-child(2) a:last-of-type { margin-bottom: 0; }
+	.web-tweet ul li:nth-child(2) a:hover > span {  }
+	.web-tweet ul li:nth-child(2) a:after {  }
+	.web-tweet ul li:nth-child(2) a span {  }
+	.web-tweet ul li:nth-child(2) a span i {  }
+	.web-tweet ul li .web-tweet-post a {  }
+	.web-tweet ul li .web-tweet-post a:hover > h5 {  }
+	.web-tweet ul li .web-tweet-post a h5 {  }
+	.web-tweet ul li .web-tweet-post {  }
+	.web-tweet ul li .web-tweet-post:last-of-type { margin-bottom: 0; }
+*/
+}
